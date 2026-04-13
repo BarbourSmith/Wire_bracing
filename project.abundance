@@ -4,6 +4,13 @@
   "y": 0,
   "uniqueID": "id-1",
   "name": "Wire_bracing",
+  "ioValues": [
+    {
+      "name": "Screw_Size",
+      "ioValue": 5,
+      "currentEquation": "5"
+    }
+  ],
   "topLevel": true,
   "allAtoms": [
     {
@@ -20,21 +27,21 @@
     },
     {
       "atomType": "Circle",
-      "x": 0.05158730158730159,
-      "y": 0.22005571030640667,
+      "x": 0.14219576719576718,
+      "y": 0.22284122562674097,
       "uniqueID": "id-4",
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 4,
+          "ioValue": 5,
           "currentEquation": "4"
         }
       ]
     },
     {
       "atomType": "Circle",
-      "x": 0.041005291005291,
-      "y": 0.4735376044568245,
+      "x": 0.12037037037037036,
+      "y": 0.415041782729805,
       "uniqueID": "id-7",
       "ioValues": [
         {
@@ -45,8 +52,8 @@
     },
     {
       "atomType": "Difference",
-      "x": 0.13293650793650794,
-      "y": 0.2841225626740947,
+      "x": 0.2996031746031746,
+      "y": 0.2479108635097493,
       "uniqueID": "id-10",
       "ioValues": [
         {
@@ -61,8 +68,8 @@
     },
     {
       "atomType": "Extrude",
-      "x": 0.28769841269841273,
-      "y": 0.2256267409470752,
+      "x": 0.3948412698412699,
+      "y": 0.233983286908078,
       "uniqueID": "id-14",
       "ioValues": [
         {
@@ -244,7 +251,7 @@
         {
           "name": "Shape 2",
           "ioValue": {
-            "geometry": "extrude-cut-circle-5-circle-2-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-6",
+            "geometry": "extrude-cut-circle-5-circle-2.5-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-6",
             "dimension": "3D",
             "tags": [],
             "plane": {
@@ -273,8 +280,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.6871693121693122,
-      "y": 0.6991643454038997,
+      "x": 0.6891534391534391,
+      "y": 0.3537604456824513,
       "uniqueID": "id-69",
       "name": "Fillet-",
       "ioValues": [
@@ -284,7 +291,8 @@
         },
         {
           "name": "Radius",
-          "ioValue": 1
+          "ioValue": 0.5,
+          "currentEquation": ".5"
         }
       ],
       "topLevel": false,
@@ -357,7 +365,7 @@
           "ioValues": [
             {
               "name": "radius",
-              "ioValue": 1
+              "ioValue": 0.5
             }
           ],
           "codeVersion": 1,
@@ -471,6 +479,43 @@
       },
       "unitsKey": "MM",
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Export",
+      "x": 0.8042328042328042,
+      "y": 0.6323119777158774,
+      "uniqueID": "id-96",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STL",
+          "currentEquation": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "Wire_bracing 5",
+          "currentEquation": "Wire_bracing 5"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "Wire_bracing 5"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.2395543175487465,
+      "uniqueID": "id-101",
+      "name": "Screw_Size"
     }
   ],
   "allConnectors": [
@@ -530,14 +575,24 @@
       "ap2ID": "id-50"
     },
     {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-50",
-      "ap2ID": "id-2"
-    },
-    {
       "ap2Name": "Shape",
       "ap1ID": "id-50",
       "ap2ID": "id-69"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-69",
+      "ap2ID": "id-2"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-69",
+      "ap2ID": "id-96"
+    },
+    {
+      "ap2Name": "diameter",
+      "ap1ID": "id-101",
+      "ap2ID": "id-4"
     }
   ],
   "unitsKey": "MM",
