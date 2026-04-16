@@ -7,8 +7,8 @@
   "ioValues": [
     {
       "name": "Screw_Size",
-      "ioValue": 5,
-      "currentEquation": "5"
+      "ioValue": 5.25,
+      "currentEquation": "5.25"
     }
   ],
   "topLevel": true,
@@ -33,8 +33,7 @@
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 5,
-          "currentEquation": "4"
+          "ioValue": 5.25
         }
       ]
     },
@@ -78,21 +77,19 @@
         },
         {
           "name": "height",
-          "ioValue": 6,
-          "currentEquation": "6"
+          "ioValue": 6
         }
       ]
     },
     {
       "atomType": "Circle",
-      "x": 0.09523809523809523,
-      "y": 0.9303621169916434,
+      "x": 0.09656084656084656,
+      "y": 0.9220055710306407,
       "uniqueID": "id-18",
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 7,
-          "currentEquation": "7"
+          "ioValue": 7
         }
       ]
     },
@@ -160,8 +157,7 @@
         },
         {
           "name": "zDist",
-          "ioValue": -5,
-          "currentEquation": "-5"
+          "ioValue": -5
         }
       ]
     },
@@ -177,13 +173,11 @@
         },
         {
           "name": "x-axis degrees",
-          "ioValue": 90,
-          "currentEquation": "90"
+          "ioValue": 90
         },
         {
           "name": "y-axis degrees",
-          "ioValue": 0,
-          "currentEquation": "0"
+          "ioValue": 0
         },
         {
           "name": "z-axis degrees",
@@ -251,7 +245,7 @@
         {
           "name": "Shape 2",
           "ioValue": {
-            "geometry": "extrude-cut-circle-5-circle-2.5-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-6",
+            "geometry": "extrude-cut-circle-5-circle-2.625-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-6",
             "dimension": "3D",
             "tags": [],
             "plane": {
@@ -279,6 +273,43 @@
       "unionType": "Fusion"
     },
     {
+      "atomType": "Export",
+      "x": 0.8075396825396826,
+      "y": 0.6211699164345404,
+      "uniqueID": "id-96",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STL",
+          "currentEquation": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "Wire Holder",
+          "currentEquation": "Wire Holder"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "Wire Holder"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.15384615384615385,
+      "uniqueID": "id-101",
+      "name": "Screw_Size"
+    },
+    {
       "atomType": "GitHubMolecule",
       "x": 0.6891534391534391,
       "y": 0.3537604456824513,
@@ -291,8 +322,7 @@
         },
         {
           "name": "Radius",
-          "ioValue": 0.5,
-          "currentEquation": ".5"
+          "ioValue": 0.5
         }
       ],
       "topLevel": false,
@@ -366,6 +396,10 @@
             {
               "name": "radius",
               "ioValue": 0.5
+            },
+            {
+              "name": "inputShape",
+              "ioValue": "__GEOMETRY_INPUT__"
             }
           ],
           "codeVersion": 1,
@@ -380,10 +414,6 @@
             {
               "name": "radius",
               "ioValue": 2
-            },
-            {
-              "name": "inputShape",
-              "ioValue": "__GEOMETRY_INPUT__"
             }
           ],
           "codeVersion": 1,
@@ -479,43 +509,6 @@
       },
       "unitsKey": "MM",
       "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Export",
-      "x": 0.8042328042328042,
-      "y": 0.6323119777158774,
-      "uniqueID": "id-96",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "File Type",
-          "ioValue": "STL",
-          "currentEquation": "STL"
-        },
-        {
-          "name": "Resolution (dpi)",
-          "ioValue": 96
-        },
-        {
-          "name": "Part Name",
-          "ioValue": "Wire_bracing 5",
-          "currentEquation": "Wire_bracing 5"
-        }
-      ],
-      "type": null,
-      "resolution": 96,
-      "importIndex": 0,
-      "partName": "Wire_bracing 5"
-    },
-    {
-      "atomType": "Input",
-      "x": 0.025384615384615384,
-      "y": 0.2395543175487465,
-      "uniqueID": "id-101",
-      "name": "Screw_Size"
     }
   ],
   "allConnectors": [
@@ -580,6 +573,11 @@
       "ap2ID": "id-69"
     },
     {
+      "ap2Name": "diameter",
+      "ap1ID": "id-101",
+      "ap2ID": "id-4"
+    },
+    {
       "ap2Name": "number or geometry",
       "ap1ID": "id-69",
       "ap2ID": "id-2"
@@ -588,11 +586,6 @@
       "ap2Name": "geometry",
       "ap1ID": "id-69",
       "ap2ID": "id-96"
-    },
-    {
-      "ap2Name": "diameter",
-      "ap1ID": "id-101",
-      "ap2ID": "id-4"
     }
   ],
   "unitsKey": "MM",
